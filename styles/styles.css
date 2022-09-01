@@ -21,7 +21,7 @@
     margin: 2rem;
 }
 
-.methods-list__list-item {
+li[data-id='methods-list__list-item'] {
     list-style: none;
     line-height: 30px;
     margin-bottom: 5px;
@@ -32,7 +32,7 @@
     box-shadow: 2px 2px 2px 1px rgba(115, 115, 119, 0.2);
 }
 
-.methods-list__list-item:hover {
+li[data-id='methods-list__list-item']:hover {
     color:rgba(11, 11, 133, 0.611);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, 0.275);
     border: 1px solid rgba(6, 6, 97, 0.548);

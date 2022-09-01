@@ -47,7 +47,7 @@ const methodsList = document.querySelector(".methods-list");
 methods.forEach((el) => {
    const li = document.createElement("li");
    li.innerText = el.type;
-   li.setAttribute("data-id", "methods-list__list-item");
+   li.dataset.id = "methods-list__list-item";
    //    li.classList.add("methods-list__list-item");
 
    const img = document.createElement("img");
