@@ -44,11 +44,12 @@ const methods = [
 ];
 
 const methodsList = document.querySelector(".methods-list");
+
 methods.forEach((el) => {
    const li = document.createElement("li");
    li.innerText = el.type;
-   li.setAttribute("data-id", "methods-list__list-item");
-   //    li.classList.add("methods-list__list-item");
+   li.setAttribute("data-id", el.id);
+   li.classList.add("methods-list__list-item");
 
    const img = document.createElement("img");
    img.classList.add("methods-description__image-example");
@@ -62,14 +63,16 @@ methods.forEach((el) => {
    description.innerText = el.description;
 
    const methodsDescription = document.querySelector(".methods-description");
-
-   li.addEventListener("click", () => {
+   const onClick = ({ target }) => {
+      const selectedLi = target.dataset.id;
+      const el = methods.find((method) => method.id == selectedLi);
       methodsDescription.innerText = "";
 
       methodsDescription.appendChild(title);
       methodsDescription.appendChild(description);
       methodsDescription.appendChild(img);
-   });
+   };
 
+   li.addEventListener("click", onClick);
    methodsList.append(li);
 });
