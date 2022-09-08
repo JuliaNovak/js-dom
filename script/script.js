@@ -85,35 +85,3 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
-
-// methods.forEach((el) => {
-//    const li = document.createElement("li");
-//    li.innerText = el.type;
-//    li.setAttribute("data-id", el.id);
-//    li.classList.add("methods-list__list-item");
-
-//    const img = document.createElement("img");
-//    img.classList.add("methods-description__image-example");
-//    img.src = el.img;
-
-//    const title = document.createElement("h4");
-//    title.innerText = el.type;
-//    title.classList.add("title");
-
-//    const description = document.createElement("p");
-//    description.innerText = el.description;
-
-//    const methodsDescription = document.querySelector(".methods-description");
-//    const onClick = ({ target }) => {
-//       const selectedLi = target.dataset.id;
-//       const el = methods.find((method) => method.id == selectedLi);
-//       methodsDescription.innerText = "";
-
-//       methodsDescription.appendChild(title);
-//       methodsDescription.appendChild(description);
-//       methodsDescription.appendChild(img);
-//    };
-
-//    li.addEventListener("click", onClick);
-//    methodsList.append(li);
-// });
